@@ -8,7 +8,7 @@ export default function About() {
     <section id="about" className="py-16 lg:py-24 max-w-7xl mx-auto px-6 lg:px-12">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-black text-xs font-bold tracking-widest uppercase">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full  text-black text-xs font-bold tracking-widest uppercase">
           Welcome to GlobalX Innovation Labs
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-black tracking-tight">

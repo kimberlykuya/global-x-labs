@@ -13,10 +13,7 @@ export default function Introduction() {
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Copy & Action */}
           <div className="lg:col-span-7 space-y-8 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-black text-xs font-bold uppercase tracking-wider">
-              <FaRocket className="text-black text-xs" />
-              <span>Making Innovations Happen</span>
-            </div>
+            
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-[1.12]">
