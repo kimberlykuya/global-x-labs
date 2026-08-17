@@ -13,8 +13,8 @@ export default function Services() {
       <p className="text-sm text-center font-bold">OUR SERVICES</p>
       <br />
       <div className="items-center justify-center grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {services.map((service, index) =>
-          serviceDescription(service.title, service.image)
+        {services.map((service) =>
+          serviceDescription(service.title, service.image, service.title)
         )}
       </div>
     </div>
@@ -36,9 +36,9 @@ const services = [
   },
 ];
 
-function serviceDescription(title, image) {
+function serviceDescription(title, image, key) {
   return (
-    <div>
+    <div key={key}>
       <p className="text-sm mb-2">{title}</p>
       <div className="size-40 sm:size-60 md:size-52 xl:size-64">
         <img
