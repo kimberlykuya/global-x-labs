@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
 import { FaHandshake, FaBullseye, FaGlobe } from "react-icons/fa6";
+import { getAssetPath } from "@/lib/utils";
 
 export default function About() {
   return (
     <section id="about" className="py-16 lg:py-24 max-w-7xl mx-auto px-6 lg:px-12">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full  text-black text-xs font-bold tracking-widest uppercase">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-black text-xs font-bold tracking-widest uppercase">
           Welcome to GlobalX Innovation Labs
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
@@ -58,7 +59,7 @@ export default function About() {
             >
               <img
                 className="max-h-16 max-w-[80%] object-contain filter grayscale group-hover:grayscale-0 transition-all"
-                src={partner.logo}
+                src={getAssetPath(partner.logo)}
                 alt={partner.name}
               />
             </div>

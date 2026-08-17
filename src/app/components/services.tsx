@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { FaBriefcase, FaCoins, FaLaptopCode, FaArrowRight } from "react-icons/fa6";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Services() {
   const handleRequestConsultation = () => {
@@ -35,8 +36,9 @@ export default function Services() {
                 <img
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   alt={service.title}
-                  src={service.image}
+                  src={getAssetPath(service.image)}
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white font-bold text-base">
                   <div className="p-2 rounded-xl bg-black/60 backdrop-blur-md border border-white/20">

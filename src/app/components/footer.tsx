@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaInstagram, FaXTwitter, FaLinkedinIn, FaCheck } from "react-icons/fa6";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -23,9 +24,10 @@ export default function Footer() {
               alt="GlobalX Innovation Labs"
               height={44}
               width={140}
-              src="/logo.png"
+              src={getAssetPath("/logo.png")}
               className="h-10 w-auto object-contain"
             />
+
             <p className="text-xs leading-relaxed text-slate-600 max-w-sm">
               GlobalX Innovation Labs is a dynamic hub making innovations happen across STEAM education, green transitions, and corporate digital transformation in emerging markets.
             </p>

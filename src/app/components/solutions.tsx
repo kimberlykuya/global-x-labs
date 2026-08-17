@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { FaGraduationCap, FaChartLine, FaHandHoldingDollar, FaArrowRight } from "react-icons/fa6";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Solutions() {
   const [activeCategory, setActiveCategory] = useState("all");
+
+
 
   const handleInquire = (targetInterest: string) => {
     const contactSection = document.getElementById("contact");
@@ -86,7 +89,7 @@ export default function Solutions() {
                 <img
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   alt={solution.title}
-                  src={solution.image}
+                  src={getAssetPath(solution.image)}
                 />
                 <div className="absolute top-4 left-4">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold text-white bg-black/80 backdrop-blur-md shadow-md">

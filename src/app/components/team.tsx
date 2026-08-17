@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { FaLinkedinIn, FaXTwitter, FaUserGraduate, FaBriefcase, FaDiagramProject } from "react-icons/fa6";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Team() {
   return (
@@ -28,9 +29,10 @@ export default function Team() {
             <div className="w-28 h-28 shrink-0 overflow-hidden rounded-2xl border-2 border-slate-200 group-hover:border-black transition-colors shadow-xs">
               <img
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                src={member.image}
+                src={getAssetPath(member.image)}
                 alt={member.name}
               />
+
             </div>
             <div className="space-y-2 text-center sm:text-left">
               <div>

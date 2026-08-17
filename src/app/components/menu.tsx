@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Menu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Menu() {
             alt="GlobalX Innovation Labs"
             height={42}
             width={120}
-            src="/logo.png"
+            src={getAssetPath("/logo.png")}
             className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </a>
