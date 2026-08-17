@@ -1,42 +1,60 @@
 "use client";
 import React from "react";
+import { FaAward, FaLightbulb, FaGlobe } from "react-icons/fa6";
 
 export default function WhyUs() {
   return (
-    <div className="px-20 lg:px-40">
-        <img
-        src="https://i.pinimg.com/564x/a3/9f/aa/a39faac3c37be3ddd8f164a8ec77c558.jpg"
-        alt=""
-        style={{ objectFit: "cover" }}
-        className="w-screen h-60"
-      />
-      <br/>
-      <p className="font-bold text-center text-sm">WHY CHOOSE US?</p>
-      <br />
-      <div className="flex-col lg:flex-row flex gap-10 h-auto lg:max-h-72 xl:max-h-56">
-      {focus.map((item, index) => (
-          <div key={index} className="flex flex-col items-center lg:w-1/3"> 
-            <p className="font-playfair">
-              <b>{item.title}</b> {item.body}
-            </p>
-          </div>
+    <section className="py-16 lg:py-20 max-w-7xl mx-auto px-6 lg:px-12  text-black rounded-3xl my-8 shadow-xs">
+      <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span className="text-xs font-extrabold tracking-widest text-slate-600 uppercase">
+          Why Partner With GlobalX?
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-black">
+          Delivering Real Innovation, Growth & Impact
+        </h2>
+        <p className="text-sm sm:text-base text-slate-700">
+          We combine domain expertise, emerging tech capabilities, and sustainable strategy to deliver end-to-end transformation.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {whyUsItems.map((item, index) => (
+          <article
+            key={index}
+            className="flex flex-col justify-between p-8 rounded-2xl bg-white border border-slate-200 shadow-md hover:shadow-xl hover:border-black transition-all space-y-4"
+          >
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center text-xl font-bold">
+                {item.icon}
+              </div>
+              <h3 className="text-xl font-bold text-black">{item.title}</h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                {item.body}
+              </p>
+            </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
-const focus = [
+const whyUsItems = [
   {
-    title: "Expertise",
-    body: "Our team comprises seasoned professionals with a deep understanding of both green initiatives and digital technologies, ensuring holistic solutions tailored to your unique needs. If you want to establish an innovation hub or lab, tinkering labs for schools, institutions or community centres, start a STEM Club, STEAM education we are at your service.    ",
+    title: "Deep Domain Expertise",
+    icon: <FaAward />,
+    body: "Our team comprises seasoned professionals with deep expertise in green initiatives, hardware innovation, and digital strategy. Whether you want to establish an innovation hub, tinkering lab, or STEAM program, we provide end-to-end guidance.",
   },
   {
-    title: "Innovation",
-    body: "We stay ahead of the curve, continuously exploring new avenues and embracing emerging technologies to propel your business towards sustainable success.    ",
+    title: "Continuous Tech Innovation",
+    icon: <FaLightbulb />,
+    body: "We stay ahead of the curve by exploring emerging avenues in AI, IoT, and digital skilling to propel businesses and learners toward sustainable, future-proof success.",
   },
   {
-    title: "Impact",
-    body: "Beyond profitability, we prioritize social and environmental impact, aligning your organization with sustainable practices that benefit both society and the planet.",
+    title: "Measurable Social & Environmental Impact",
+    icon: <FaGlobe />,
+    body: "Beyond immediate returns, we prioritize social enrichment and environmental stewardship—aligning your organization with responsible practices that benefit society.",
   },
 ];
+
+

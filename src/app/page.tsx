@@ -1,5 +1,3 @@
-"use-client";
-import Head from "next/head";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
@@ -9,41 +7,29 @@ import Solutions from "./components/solutions";
 import Team from "./components/team";
 import Focus from "./components/focus";
 import WhyUs from "./components/whyus";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "GlobalX Innovation Labs | Making Innovations Happen",
+  description: "Pioneering STEAM education, corporate digital transformation, green technology transitions, and tech startup growth across emerging markets.",
+  icons: {
+    icon: "/logo.png",
+  },
+};
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <link rel="icon" href="/public/logo.png" />
-      </Head>
-      <div>
-        <Introduction />
-        <br />
-        <br />
-        
-        <About />
-        <br />
-        <br />
-        <Focus />
-        <br/>
-        <br/>
-        <WhyUs />
-        <br/>
-        <br/>
-        <Solutions />
-        <br />
-        <br />
-        <Services />
-        <br />
-        <br />
-        <Team />
-        <br />
-        <br />
-        <Contact />
-        <br />
-        <br />
-        <Footer />
-      </div>
-    </>
+    <main className="min-h-screen space-y-0">
+      <Introduction />
+      <About />
+      <Focus />
+      <WhyUs />
+      <Solutions />
+      <Services />
+      <Team />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
+
